@@ -1,0 +1,218 @@
+Mi Curso Java:
+
+La Programacion Oriendata a Objetos:
+
+-Lenguajes Oriendatos a procedimientos:
+  El codigo resultante de la aplicacion era muy largo y si existia un error o tenia que corregir o cambiar 
+  algo, era demasiado complejo, asi como este codigo no era posible usarse en otro programa similar.
+  El codigo resultaba dificil de decifrar, si habia la necesidad de cambiarse por o modificarse la aplicacion
+  tenia que hacerlo la misma persona, pues otra persona no lo entenderia.
+
+-Lenguajes de Programacion Orientados a Objetos:
+  La programacion fue trasladada orientada a los objetos de la vida real, pues cada objeto tiene ciertas 
+   caracteristicas y ciertos comportamientos, este tipo de programas se pueden dividir o seccionar en varios
+   objetos y estos se unen formando un todo, a esto se le llama modularizacion.
+ 
+  Por ejemplo un automovil consta de varios objetos y alguno de estos deja de funcionar, no todo el carro tiene
+  por que dejar de funcionar, sino que se pueden separar o seccionar para que el carro siga funcionando.
+
+  Por ejemplo un equipo de musica compacto es un programa orientado a procedimientos, si en este se descompone 
+  alguna parte del mismo, es necesario llevar todo el equipo y nos quedariamos sin poder utilizar este mismo, en
+  cambio un equipo de musica como un stereo que este dividido en partes, tiene la ventaja de que si algo se 
+  descompone ejemplo el lector del cd, aun asi el estereo puede seguir funcionando, y unicamente se separa la
+  la parte que no esta funcionando correctamente, esto es modularizacion.
+
+  Un programa en Java es basicamente un grupo de clases unidas entre si, para que todo el programa funcione como 
+   una unidad.
+  
+  *Clase: Es un modelo donde se redactan las caracteristicas comunes de un grupo de objetos.
+           Ejemplo la plataforma de un automovil puede funcionar para varios automoviles.
+  *Objetos: Todos los objetos tienen una propiedad como el color, material, etc y un comportamiento como arrancar, 
+             Deterse, frenar, etc...
+  *Pseudocodigo: Es una manera de escribir un programa sin ser codigo ni ser idioma completamente.
+
+  *Metodo: Un metodo es una accion o comportamiento de los objetos.
+           Tambien puede recibir valores, efectuar operaciones con estos y retornar valores, sin embargo un metodo
+           siempre esta asociado a un objeto
+	   Donde: 
+            
+               public void metodo (){
+               }
+      
+            public: Modificador de acceso
+            void: Valor de retorno
+            metodo: Nombre del metodo
+            (): Argumentos
+	    {}: Cuerpo del metodo
+
+  *Metodo Contructor: Es un metodo especial de una clase que se invoca siempre que se crea un objeto de esa clase.
+                      Ocurren 3 cosas: 
+                      -Se asigna memoria para el objeto.
+                      -Se inicializan los atributos de ese objeto.
+                      -Se invoca al contructor de la clase que puede ser uno entre varios
+              *Sus caracteristicas son: 
+                -Tienen el mismo nombre de la Clase.
+                -No devuelve ningun valor.
+                -Debe declararse como publico.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Git/GitHub:
+ls - Para saber todos los archivos que tengo en esa ubicacion.
+cd ..  - Para salir a una carpeta anterior.
+cd (ubicacion/NombreCarpeta) - Para entrar a alguna ubicacion
+mkdir (NombreCarpeta) - para crear una carpeta en esa ubicacion
+rmdir (NombreCarpeta) - borrar esa carpeta
+git init - Instala un repositorio en esa ubicacion
+git status - Nos da el estado de donde estamos parados y si se ha hecho un commit o no/ Nos sale los archivos
+             que esten ahi.
+git add -A  se encuentra preparado para hacer el commit de los archivos de esa direccion
+git commit -m "TextClave" -Para hacer el commit de esos archivos, se pone un breve comentario para los demas
+                          programadores del equipos.
+git log -Muestra todo el historia de los commit que se han hecho
+git diff -Muestra los cambios que se han hecho despues de alguna modificacion del archivo al que se le hizo
+         el commit.
+git add . - Para agregar todos los archivos que tenga sin hacer el commit agregarlos al stage/para revisar
+           si quedo dentro del stage area o no, podemos hacer un GIT STATUS de nuevo.
+git checkout (NombreArchivoaModificar)-Sirve para desacer una modificacion que se habia hecho al stage de un documento 
+git reset HEAD (NombreArchivoCompleto) -Sirve para desacer una modificacion que ya se hizo en una stage area, osea una
+                                        modificacion que ya se habia hecho en un stage area/Importante despues de este 
+                                        paso revisar de nuevo que ya halla bajado del stage esta modificacion (tiene que
+                                        salir unicamente como archivo modificado).
+git checkout -- (NombreArchivo) -Sirve para quitar el cambio en el documento que se habia hecho anteriormente antes de  
+                                 subir el ultimo stage que se quito.
+
+
+git log --oneline -Sirve para ver todos los commit hechos en una sola linea y sin tanta informacion.
+git log --oneline | cat  -Sirve para ver el numero de cada commit, es unicamente informativo.
+git reset (NumeroDeCommit) -Sirve para desahcer los commit que esten hechos antes de ese, si este fuera el comit dos, el 
+                            commit tres deja de existir y nos muestra solo los cambios del commit numero 2.
+                            *Es importante tambien usar el comando git checkout (NombreArchivo) para desacer el cambio
+                            que se hiba a hacer anteriormente osea el del viejo commit que borramos.
+git reset --hard (NumeroDeCommit) -Sirve para elminar commit y lo que este en el stage area al mismo tiempo, se pone 
+                                   NumeroDeCommit como referencia que queremos estar en ese commit como el ultimo y borrar
+                                   todo lo que se hizo despues de ese stage commit y todo.  
+git reset --soft (NumeroDeCommit) -Sirve para borrar el commit pero nos deja con los ultimos cambios del stage que se hicieron 
+                                   antes de hacer ese commit que borramos.
+git diff (NumeroDeCommit) (NumeroDeCommit) -Sirve para hacer una comparativa entre dos commits hechos ejemplo ver diferencia 
+                                           entre commit 1 y entre commit 2, se halla hecho lo que se halla hecho.
+git log --oneline --decorate -Sirve para ver las ultimas diferencias hechas entre dos commits.
+
+git branch -Sirve para saber en que rama estamos posicionados.
+
+git checkout (NombreDeRama) -Sirve para cambiar de rama una ves que ya este creada usando el NombreDeRama
+
+git checkout -b (NombreDeNuevaRama) -Sirve para crear y pararnos en la nueva rama que acabemos de crear en ese momento.
+
+git branch -m (NombreDeRama) (RamaNombreNuevo) -Sirve para cambiarle el nombre de una rama ya existente por otro nombre que 
+                                                queramos ejemplo: git branch -m nuevaRama ramaNombreNuevo.
+
+git branch -d (NombreDeRama) -Sirve para eliminar una rama ejemplo: git branch -d ramaNombreNuevo.
+
+git branch -h  -Sirve para ver todas las opciones que tenemos para las ramas, es un comando solo informativo.
+
+git log --oneline --decorate --all  -Sirve para ver todos los commits hechos en todas las ramas, no unicamente de la master
+                                     sino todas las ramas de todos los cambios que hallamos hecho.
+
+
+Nota:
+Cuando empezemos a usar otra rama que no sea la rama "Master" primero cambiamos a la nueva rama y despues hacemos la 
+modificacion del archivo o documento en el que estemos trabajando, guardamos cambios y hacemos el commmit, este commit
+se quedara hecho en la rama en la que estemos trabajando, no necesariamente en la master, si nosotros despues de hacer 
+el commit cambiamos a la rama "Master" por ejemplo y entramos al doc en el que estabamos trabajando no se habran hecho 
+los cambios, pues estos solo pertenecen a la rama con la que hicimos dicho commit.
+
+
+git merge (RamaAUnir)  -Sirve para unir dos ramas, si estoy en la rama Master y uso el comando para con otro rama, estas dos
+                        se uniran y los cambios afectan las dos ramas.
+
+git clone  -Sirve para clonar algun proyecto que ya este en repositorio de GitHub, se escribe esto mas la url de dicho repo
+           Ejemplo: git clone https://github.com/joseluis998/PruebaGit.git.
+
+git pull -Sirve para estar descargando el codigo que no tenemos en nuestra maquina de el repositorio
+
+git fetch  -Sirve para descargar en el repo todas las modificaciones hechas en los docs o programas
+
+git push  -Manda todas las modificaciones hechas del codigo al repo de GitHub para despues descargarlas en el otro documento que
+           se este trabajando
+
+
+me quede en el video 11
+
+
+
+
+*Nota para Eclipse para Clonar y hacer Commit en GitHub:
+-Creamos un repositorio nuevo en GitHub, lo ponemos como publico.
+-Abrimos eclipse en la posicion donde va a estar guardado.
+-Vamos a la opcion Open Perspective y seleccionamos Git Repositories.
+-Copiamos la URL del repositorio que habiamos creado.
+-Pegamos la URL dentro de eclipse en la opcion de URI.
+-Se autocompletan otros espacios una ves puesta esta URL.
+-En la parte de Autenticacion mas abajo pregunta por usuario y contraseña.
+-Ponemos user y password:
+  User:joseluis998
+  Correo:jlr_99@live.com
+  Password:Greciaesmibebe123 
+-Presionamos Next.
+-Presionamos Next de nuevo.
+-Nos da la opcion de modificar el directorio donde se estara guardando nuestro proyecto con Git
+  podemos modificar esta opcion.
+-Presionamos Next o Finish.
+-Ya podemos empezar a crear un proyecto en Java.
+-Una ves creado el proyecto de Java, damos clic derecho en el proyecto y vamos a Team>Share Project>
+  > Agregamos el repositorio de Git si es que nos lo pregunta.
+-Hacemos proyecto o algun cambio en el y para hacer el primer commit hacemos lo siguiente:
+-Abrimos perspectiva de Git para que nos muestre toda la perspectiva de Git de nuevo.
+-En la parte inferior de Eclipse buscamos una opcion que diga Git Staging.
+-Veremos que se abren 3 secciones en esta misma parte inferior.
+-Seleccionamos todos los archivos de Unstaged changes y los movemos a Staged Changes para que estos
+  esten en el stage.
+-Ponemos un comentario para el Commit que se hara.
+-Ya podemos presionar Commit and Push o solo Commit.
+-Se nos abre un recuadro que indica la rama en la que se hara esto y mas informacion.
+-Damos en Next.
+-Se nos abre otra ventana pidiendo User and Password, se los ponemos y damos en Ok
+-Nos saldra mas informacion con el nombre del repositorio y la rama etc, damos nuevamente en Finish.
+-De nuevo nos pide user y password, los ponemos nuevamente y clic en Ok.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
