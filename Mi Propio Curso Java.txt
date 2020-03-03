@@ -28,7 +28,15 @@ La Programacion Oriendata a Objetos:
   *Clase: Es un modelo donde se redactan las caracteristicas comunes de un grupo de objetos.
            Ejemplo la plataforma de un automovil puede funcionar para varios automoviles.
   *Objetos: Todos los objetos tienen una propiedad como el color, material, etc y un comportamiento como arrancar, 
-             Deterse, frenar, etc...
+            Deterse, frenar, etc...
+
+	           Coche coche1=new Coche (); //Crear objeto de mi clase Coche 
+           Donde "Coche" es el nombre de la clase.
+           Donde coche1 es el objeto.
+           Donde new es una palabra new es una palabra reservada para crear objetos.
+           Donde el segundo Coche es el Contructor que debe llevar siempre el mismo nombre de la clase que se quiere 
+               instanciar. 
+
   *Pseudocodigo: Es una manera de escribir un programa sin ser codigo ni ser idioma completamente.
 
   *Metodo: Un metodo es una accion o comportamiento de los objetos.
